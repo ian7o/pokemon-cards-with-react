@@ -5,40 +5,8 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
   padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 .content {
@@ -47,14 +15,12 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  gap: 20px;
   align-items: center;
 }
-
 .pokemonCard {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  gap: 10px;
   width: 400px;
   height: 700px;
   border: 5px solid rgb(255, 204, 0);
@@ -65,35 +31,73 @@
   display: flex;
   justify-content: space-around;
   font-size: 110%;
-  margin: 9px 0px 24px 0px;
+  margin: 0px 0px 0px 0px;
 }
 .pokemonImageContainer {
-  padding: 19%;
+  padding: 5% 0 0 0;
   display: flex;
-  border: 3px solid rgb(255, 204, 0);
-  border-radius: 10px;
   justify-content: center;
-  margin: 0px 0px 24px 0px;
+  margin: 24px 0px 64px 0px;
   align-items: center;
+  width: 10px;
 }
-
 .pokemonImageContainer > img {
-  display: flex;
   transform: scale(2);
   flex-grow: 1;
   width: 200px;
-  z-index: 0;
 }
-
 .atacks {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   font-size: 110%;
 }
-
 .allPokemonInfo {
+  display: flex;
+  position: relative;
+  width: 300px;
+  background-color: rgba(192, 192, 192, 0.376);
   padding: 14px 18px;
-  border: 2px solid rgb(255, 204, 0);
-  margin: 90px 0px 0px 0px;
+  flex-direction: column;
+  border-radius: 15px;
+}
+.name,
+.life,
+.defense,
+.specialAttack,
+.specialDefense,
+.firstAtackName,
+.secondAtackName,
+.height,
+.width {
+  display: flex;
+  flex-direction: row;
+}
+
+.name > p:nth-child(1),
+.life > p:nth-child(1),
+.defense > p:nth-child(1),
+.specialAttack > p:nth-child(1),
+.specialDefense > p:nth-child(1),
+.firstAtackName > p:nth-child(1),
+.secondAtackName > p:nth-child(1),
+.height > p:nth-child(1),
+.width > p:nth-child(1) {
+  display: inline;
+  text-align: right;
+  width: 50%;
+}
+
+.name > p:nth-child(2),
+.life > p:nth-child(2),
+.defense > p:nth-child(2),
+.specialAttack > p:nth-child(2),
+.specialDefense > p:nth-child(2),
+.firstAtackName > p:nth-child(2),
+.secondAtackName > p:nth-child(2),
+.height > p:nth-child(2),
+.width > p:nth-child(2) {
+  display: inline;
+  text-align: left;
+  width: 50%;
+  padding: 0 0px 0 4px;
 }

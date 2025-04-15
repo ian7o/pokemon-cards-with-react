@@ -1,17 +1,17 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 
 import PokemonCard from "./PokemonCard";
 
-let pokemonVariablesiables = {
+let pokemonVariables = {
   moves: "atack1",
   pokemonName: "Hitmonlee",
   life: 50,
+  defense:89,
+  specialAttack:140,
+  specialDefense:200,
   type: "fighting",
   image:
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
+  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/106.png",
   firstMoveName: "limber",
   secondMoveName: "reckles",
   inputTextPokemon: "para depois",
@@ -22,9 +22,7 @@ let pokemonVariablesiables = {
 function App() {
   return (
     <>
-      <div>
-        <PokemonCard props={pokemonVariablesiables} />
-      </div>
+      <PokemonCard props={pokemonVariables} />
     </>
   );
 }
